@@ -9,6 +9,7 @@ import sys
 # 添加src目录到路径
 sys.path.append(os.path.join(os.path.dirname(__file__), 'src'))
 
+# 修复：因为已经添加了src到路径，所以直接导入模块名即可
 from src.data_preprocessing import DataPreprocessor
 from src.feature_engineering import FeatureEngineer
 from src.model_training import ModelTrainer
@@ -48,6 +49,7 @@ def main():
     print("\n" + "=" * 60)
     print("步骤 1/4: 数据预处理")
     print("=" * 60)
+
 
     # 检查是否已经预处理过
     if os.path.exists(processed_data_path):
