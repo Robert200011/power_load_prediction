@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
-from clean_data import clean_data
-from load_data import load_dataset
+from data.preprocess.clean_data import clean_data
+from data.preprocess.load_data import load_dataset
 from sklearn.preprocessing import MinMaxScaler
 
 def create_lag_features(df, lag=24):
